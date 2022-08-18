@@ -1,8 +1,57 @@
 import "./App.scss";
+// import Card from "./components/Card";
 
 function App() {
   return (
     <div className="wrapper clear">
+
+    <div style={{display:'none'}}className="overlay">
+      <div className="drawer">
+        <h2 className=" d-flex justify-between mb-20">Cart
+          <img className="cu-p m-0" src="/img/btn-remove.svg" alt="Remove"/>
+        </h2>
+        <div className="items">
+          <div className="cart-item d-flex align-center mb-20">
+            <div style={{backgroundImage:'url(/img/sneakers/1.jpg)'}} className="cart-item-img"></div>
+            <div className="mr-20 flex">
+              <p className="mb-5">Male Sneakers Nike Blazer Mid Suede</p>
+              <b>1299 usd</b>
+            </div>
+            <img className="btn-remove" src="/img/btn-remove.svg" alt="Remove"/>
+          </div>
+
+          <div className="cart-item d-flex align-center mt-10">
+            <div style={{backgroundImage:'url(/img/sneakers/1.jpg)'}} className="cart-item-img"></div>
+            <div className="mr-20 flex">
+              <p className="mb-5">Male Sneakers Nike Blazer Mid Suede</p>
+              <b>1299 usd</b>
+            </div>
+            <img className="btn-remove" src="/img/btn-remove.svg" alt="Remove"/>
+          </div>
+          
+        </div>
+        
+        <div className="cart-total-block">
+          <ul>
+            <li>
+              <span>Total:</span>
+              <div></div>
+              <b>2600 usd</b>
+            </li>
+            <li>
+              <span>Tax 5%:</span>
+              <div></div>
+              <b>150 usd</b>
+            </li>
+          </ul>
+          <button className="green-button">
+            Go to checkout 
+            <img src="/img/arrow.svg" alt="Arrow"/>
+          </button>
+        </div>
+      </div>
+    </div>
+
       <header className="d-flex justify-between align-center">
         <div className="d-flex align-center">
           <img src="/img/logo.png" alt="" width={40} height={40} />
@@ -46,18 +95,7 @@ function App() {
         </div>
 
         <div className="d-flex">
-        <div className="card">
-          <img src="/img/sneakers/1.jpg" alt="sneakers" width={133} height={112}/>
-          <h5>Male Sneakers Nike Blazer Mid Suede</h5>
-          <div className="d-flex justify-between align-center">
-            <div className="d-flex flex-column ">
-              <span>Price:</span>
-              <b>1299 usd</b>
-            </div>
-            <button className="button">
-            <img src="/img/button+.svg" alt="plus" width={11} height={11}/>
-            </button>
-          </div>
+        {/* <Card/> */}
         </div><div className="card">
           <img src="/img/sneakers/2.jpg" alt="sneakers" width={133} height={112}/>
           <h5>Male Sneakers Nike Blazer Mid Suede</h5>
@@ -97,7 +135,7 @@ function App() {
         </div>
         </div>
       </div>
-    </div>
+
   );
 }
 
